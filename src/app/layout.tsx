@@ -87,9 +87,7 @@ export default function RootLayout({
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:locale:alternate" content="en_US" />
 
-                <link rel="icon" href="/app/favicon.ico" />
-                <link rel="apple-touch-icon" href="/app/logo192.png" />
-                <link rel="manifest" href="/app/manifest.json" />
+                <link rel="icon" href="./favicon.ico" />
             </head>
             <body className="relative flex flex-col items-stretch bg-white font-inter">
                 {loading ? (

@@ -1,7 +1,6 @@
 'use client'
 import { Bullet } from "@/libs/components/bullet";
 import { Underline } from "@/libs/components/design/underline";
-// import TextiGIF from "@rahul-m-navneeth/textigif";
 
 function Landing() {
     return (
@@ -18,7 +17,7 @@ function Landing() {
                     </span> TO ALL
                 </h1>
             </div>
-            <div className="basis-1/3 coverImage w-full border-l-bsprime border-l-2 border-b-2"></div>
+            <div className="basis-1/3 bg-accent coverImage w-full border-l-bsprime border-l-2 border-b-2"></div>
         </div>
     );
 }
