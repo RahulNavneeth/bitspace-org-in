@@ -39,6 +39,8 @@ export default function RootLayout({
         fetchUser();
     }, [accessToken, userStore]);
 
+    useEffect(() => console.log(loading), [loading])
+
     return (
         <html lang="en">
             <head>
@@ -89,9 +91,9 @@ export default function RootLayout({
                 <link rel="apple-touch-icon" href="/app/logo192.png" />
                 <link rel="manifest" href="/app/manifest.json" />
             </head>
-            <body className="bg-white relative flex flex-col items-stretch font-inter">
+            <body className="relative flex flex-col items-stretch bg-white font-inter">
                 {loading ? (
-                    <div className="w-screen h-screen flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center w-screen h-screen">
                         <img className="w-[100px] animate-bounce" src="https://media.discordapp.net/attachments/1106935324556406866/1128657375260311583/logocir.png?width=1242&height=1024" />
                     </div>
                 ) : (

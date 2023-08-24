@@ -31,9 +31,9 @@ export function Header() {
     const userStore = useUserStore((state) => state.user);
     const handleProfile = async () => {
         const urlParams = new URLSearchParams({
-            client_id: GITHUB_OAUTH_CLIENT_ID,
-            redirect_uri: GITHUB_OAUTH_REDIRECT_URL,
-            scope: GITHUB_SCOPE,
+            client_id: GITHUB_OAUTH_CLIENT_ID || "",
+            redirect_uri: GITHUB_OAUTH_REDIRECT_URL || "",
+            scope: GITHUB_SCOPE || "",
             state: "random",
         });
         const url = `${GITHUB_OAUTH_AUTH_URL}?${urlParams.toString()}`;
@@ -43,21 +43,21 @@ export function Header() {
     return (
         <header
             id="Wheader"
-            className="h-header bg-white fixed z-40 shadow-md overflow-hidden w-screen flex justify-between items-center px-4 text-lg border-b-2 border-bsprime" //shadow-[0px_0px_9px_#000000]
+            className="fixed z-40 flex items-center justify-between w-screen px-4 overflow-hidden text-lg bg-white border-b-2 shadow-md h-header border-bsprime" //shadow-[0px_0px_9px_#000000]
         >
             <div className="w-1/6">
-                <Link href="/" className="font-glb text-3xl">:bs</Link>
+                <Link href="/" className="text-3xl font-glb">:bs</Link>
             </div>
-            <nav className="gap-10 w-4/6 flex flex-row items-center justify-center">
+            <nav className="flex flex-row items-center justify-center w-4/6 gap-10">
                 <NavLink href="/">HOME</NavLink>
-                <NavLink href="/Events">EVENTS</NavLink>
-                <NavLink href="/Timeline">TIMELINE</NavLink>
-                <NavLink href="/FAQ">FAQ</NavLink>
-                <NavLink href="/Socials">SOCIALS</NavLink>
-                <NavLink href="/Team">TEAM</NavLink>
+                <NavLink href="/events">EVENTS</NavLink>
+                <NavLink href="/timeline">TIMELINE</NavLink>
+                <NavLink href="/faq">FAQ</NavLink>
+                <NavLink href="/socials">SOCIALS</NavLink>
+                <NavLink href="/team">TEAM</NavLink>
             </nav>
-            <div className="w-1/6 flex flex-col items-end justify-center">
-                {!userStore ? <button onClick={handleProfile} className="bg-accent px-8 font-black py-2 text-sm border-2 border-black">
+            <div className="flex flex-col items-end justify-center w-1/6">
+                {!userStore ? <button onClick={handleProfile} className="px-8 py-2 text-sm font-black border-2 border-black bg-accent">
                     PROFILE
                 </button> : (
                     <Link href="/u/me">

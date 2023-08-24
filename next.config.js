@@ -7,9 +7,9 @@ const nextConfig = {
         GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
         PRODUCTION: process.env.PRODUCTION,
     },
-    images: {
-        domains: ["media.discordapp.net", "avatars.githubusercontent.com"],
-        remotePatterns: [
+    images : {
+        domains: ["github.com", "media.discordapp.net", "avatars.githubusercontent.com"],
+        remotePatterns : [
             {
                 protocol: 'https',
                 hostname: 'cdn.discordapp.com',

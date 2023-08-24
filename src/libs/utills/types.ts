@@ -1,18 +1,11 @@
-export type Rank = {
-    rank : number,
-    is_mod : boolean,
-    is_super_mod : boolean,
-    r_name : string,
-    Users : Array<Users>
-}
-
 export type Role = {
     role :string,
     username : string
 }
 
-export type Users = {
-    id :string,
+export type User = {
+    init : string,
+    id : string,
     username : string,
     rank : number,
     is_ban : boolean,
@@ -25,4 +18,3 @@ export type Users = {
     github_id : string,
     Role : Array<Role>
 }
-

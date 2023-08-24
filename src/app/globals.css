@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.text-box {
+    @apply bg-white border border-black border-[4px] p-3 m-2 rounded text-center font-bold
+}
+
 @font-face {
   font-family: "glacialbold";
   src: url("../libs/assets/fonts/glacial/GlacialIndifference-Bold.otf");
