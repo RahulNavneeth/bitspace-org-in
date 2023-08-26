@@ -3,6 +3,7 @@ import { API_URL } from "@/libs/constants";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Toggle from "@/libs/Toggle";
+import { Loading } from "@/libs/components/ban/loading/message";
 
 const Timeline = () => {
     interface IData {
@@ -16,18 +17,21 @@ const Timeline = () => {
     }
 
     const [data, setData] = useState<Array<IData>>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const getData = async () => {
             const { data }: { data: Array<IData> } = await axios.get(
                 `${API_URL}/timeline`,
             );
-            console.log(data);
             setData(data);
+            setLoading(false);
         };
         getData();
     }, []);
-    console.log(data);
+
+    if (loading) return <Loading msg="FETCHING TIMELINE" />
+
     return (
         <>
             <div className="h-full w-full overflow-y-scroll rtl">

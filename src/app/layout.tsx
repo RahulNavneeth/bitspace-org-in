@@ -17,6 +17,7 @@ export default function RootLayout({
 
     const userStore = useUserStore((state) => state.user);
     const setUserStore = useUserStore((state) => state.setUser);
+    const resetUserStore = useUserStore((state) => state.resetUser);
 
     const [loading, setLoading] = useState(true);
 
