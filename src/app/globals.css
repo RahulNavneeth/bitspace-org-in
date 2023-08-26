@@ -126,3 +126,7 @@ rtl {
     /* opacity: 0; */
   }
 }
+
+.jos-shrink {
+  transform: scale(1.1);
+}
