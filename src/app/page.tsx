@@ -127,9 +127,9 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div className="my-2 flex justify-between w-full text-xs ">
+                <div className="my-2 flex flex-row justify-between w-full text-xs ">
                     <div
-                        className="my-2 flex justify-between w-full text-xs jos"
+                        className="my-2 flex justify-start w-full text-xs jos"
                         data-jos_animation="fade-right"
                         data-jos_duration="0.7"
                         data-jos_rootmargin_top="0%"
@@ -142,7 +142,7 @@ function About() {
                         <Bullet name="DBMS" color="rgb(138 233 176)" />
                     </div>
                     <div
-                        className="my-2 flex justify-between w-full text-xs jos"
+                        className="my-2 flex flex-row justify-end w-full text-xs jos"
                         data-jos_animation="fade-left"
                         data-jos_duration="0.7"
                         data-jos_rootmargin_top="0%"
@@ -184,7 +184,7 @@ function About() {
 
 export default function Page() {
     return (
-        <div className="pb-32 overflow-x-hidden">
+        <div className="pb-40 overflow-x-hidden">
             <Landing />
             <div className="my-16 font-black text-[25px] w-full text-center flex flex-row items-center justify-between px-16">
                 <div
@@ -223,7 +223,7 @@ export default function Page() {
                                 fill="black"
                             />
                         </svg>
-                        <div className="absolute w-[4px] h-[100px] bg-black left-[3px] top-0" />
+                        <div className="absolute w-[4px] h-[100px] bg-black left-[3px] top-[3px]" />
                     </div>
                 </div>
                 <div
@@ -274,7 +274,7 @@ export default function Page() {
                                 fill="black"
                             />
                         </svg>
-                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                     </div>
                 </div>
                 <div
@@ -331,7 +331,7 @@ export default function Page() {
                                     fill="black"
                                 />
                             </svg>
-                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                         </div>
                     </div>
                     <div
@@ -408,7 +408,7 @@ export default function Page() {
                                     fill="black"
                                 />
                             </svg>
-                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                         </div>
                     </div>
                     <div
@@ -485,7 +485,7 @@ export default function Page() {
                                     fill="black"
                                 />
                             </svg>
-                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                         </div>
                     </div>
                     <div
@@ -562,7 +562,7 @@ export default function Page() {
                                     fill="black"
                                 />
                             </svg>
-                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0 " />
+                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px] " />
                         </div>
                     </div>
                     <div
@@ -638,7 +638,7 @@ export default function Page() {
                                     fill="black"
                                 />
                             </svg>
-                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                         </div>
                     </div>
                     <div
@@ -715,7 +715,7 @@ export default function Page() {
                                     fill="black"
                                 />
                             </svg>
-                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                            <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                         </div>
                     </div>
                     <div
@@ -835,7 +835,7 @@ export default function Page() {
                                 fill="black"
                             />
                         </svg>
-                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                     </div>
                 </div>
                 <div
@@ -885,7 +885,7 @@ export default function Page() {
                                 fill="black"
                             />
                         </svg>
-                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                     </div>
                 </div>
                 <div
@@ -977,7 +977,7 @@ export default function Page() {
                                 fill="black"
                             />
                         </svg>
-                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                     </div>
                 </div>
                 <div
@@ -1069,7 +1069,7 @@ export default function Page() {
                                 fill="black"
                             />
                         </svg>
-                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-0" />
+                        <div className="absolute w-[4px] h-[70px] bg-black left-[3px] top-[3px]" />
                     </div>
                 </div>
                 <div
