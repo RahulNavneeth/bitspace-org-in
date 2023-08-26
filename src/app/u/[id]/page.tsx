@@ -47,11 +47,11 @@ const User = ({ params }: { params: { id: string } }) => {
                     <div className="text-[50px] inline font-bold">{data.username}</div>&nbsp;&nbsp;
                 </div>
                 <>
-                    <div className="mb-6 -mt-2 font-bold text-accent text-xl">" {data.title} "</div>
+                    <div className="mb-6 -mt-2 font-bold text-accent text-xl">&qout; {data.title} &qout;</div>
                     {data.Role.length > 0 &&
                         <div className="mb-6 flex flex-row gap-2">
-                            {data.Role.map(((value) => (
-                                <div className="bg-[#DED6FE] rounded-full px-2 flex flex-row items-center justify-center">
+                            {data.Role.map(((value, idx) => (
+                                <div key={idx} className="bg-[#DED6FE] rounded-full px-2 flex flex-row items-center justify-center">
                                     <div className="w-[10px] h-[10px] rounded-full bg-accent" />
                                     <div className="font-bold px-2">{value.role}</div>
                                 </div>

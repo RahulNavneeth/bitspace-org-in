@@ -17,14 +17,15 @@ const Me = () => {
 
     const user = useUserStore((state) => state.user);
 
-    if (!user) {
+    const [data, setData] = useState<User | null>(user)
+    const [show, setShow] = useState(false)
+    const [curr, setCurr] = useState<User | null>(data)
+
+    if (!user || !data || !curr) {
         router.push("/");
         return;
     }
 
-    const [data, setData] = useState<User>(user)
-    const [show, setShow] = useState(false)
-    const [curr, setCurr] = useState<User>(data)
 
     const call = async () => {
         await axios.put(`${API_URL}/user`, curr, { withCredentials: true })
@@ -42,6 +43,7 @@ const Me = () => {
     }
 
     const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+        //@ts-ignore
         setCurr((e: User) => {
             return {
                 ...e, github_id: event.target.value
@@ -50,6 +52,7 @@ const Me = () => {
     }
 
     const handleTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        //@ts-ignore
         setCurr((e: User) => {
             return {
                 ...e, title: event.target.value
@@ -58,6 +61,7 @@ const Me = () => {
     }
 
     const handleGithubChange = (event: ChangeEvent<HTMLInputElement>) => {
+        //@ts-ignore
         setCurr((e: User) => {
             return {
                 ...e, username: event.target.value
@@ -66,6 +70,7 @@ const Me = () => {
     }
 
     const handleDiscordChange = (event: ChangeEvent<HTMLInputElement>) => {
+        //@ts-ignore
         setCurr((e: User) => {
             return {
                 ...e, discord_id: event.target.value
@@ -89,10 +94,10 @@ const Me = () => {
                 </div>
                 {data.discord_id ? (
                     <>
-                        <div className="mb-6 -mt-2 font-bold text-accent text-xl">" {data.title} "</div>
+                        <div className="mb-6 -mt-2 font-bold text-accent text-xl">&quot; {data.title} &quot;</div>
                         <div className="mb-6 flex flex-row gap-2">
-                            {data.Role.map(((value) => (
-                                <div className="bg-[#DED6FE] rounded-full px-2 flex flex-row items-center justify-center">
+                            {data.Role.map(((value, idx) => (
+                                <div key={idx} className="bg-[#DED6FE] rounded-full px-2 flex flex-row items-center justify-center">
                                     <div className="w-[10px] h-[10px] rounded-full bg-accent" />
                                     <div className="font-bold px-2">{value.role}</div>
                                 </div>
