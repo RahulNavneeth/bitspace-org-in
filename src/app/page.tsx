@@ -21,7 +21,7 @@ function Landing() {
                         OPEN
                         <Underline />
                     </span>
-                    TO ALL
+                    &nbsp;TO ALL
                 </h1>
             </div>
             <div
